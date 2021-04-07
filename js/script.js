@@ -44,21 +44,30 @@ setTimeout(function() {
         }
     }
     console.log(numeriUser);
-},3000);
 
+    //3. numeri indovinati 
+    var numeriIndovinati = [];
 
-//3. numeri indovinati 
-var numeriIndovinati = [];
+    for ( i = 0; i < numeriUser.length; i++ ) {
+        var thisnumeriIndovinati = numeriUser[i];
 
-for ( i = 0; i < numeriUser.length; i++ ) {
-    var thisnumeriIndovinati = numeriUser[i];
-
-    if (numeri.includes(thisnumeriIndovinati) == true ) {
-        numeriIndovinati.push(thisnumeriIndovinati);
+        if (numeri.includes(thisnumeriIndovinati) == true ) {
+            numeriIndovinati.push(thisnumeriIndovinati);
+        }
     }
-}
-console.log(numeriIndovinati);
+    console.log(numeriIndovinati);
+
+    //4. stampa del risultato
+    var punteggio = numeriIndovinati.length;
+    var messaggio = 'Hai perso! ';
+
+    if ( punteggio == numeriTotali ) {
+        messaggio = 'Hai vinto! ';
+    }
+
+    alert( messaggio + 'Il tuo punteggio è: ' + punteggio );
 
 
+},30000);
 
-//4. stampa del risultato
+    
