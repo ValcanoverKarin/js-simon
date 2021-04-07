@@ -29,19 +29,36 @@ console.log(numeri);
 //stampare i numeri nell' allert
 alert('Hai 30 secondi per memorizzare questi 5 numeri: ' + numeri);
 
-//2. Fare inserire 5 numeri all'utente dopo 30 secondi
+//2. inserire 5 numeri all'utente dopo 30 secondi
 setTimeout(function() {
     //numeri inseriti dall'utente
-    var userNumeri = [];
+    var numeriUser = [];
 
-    while (userNumeri.length < numeriTotali) {
+    while (numeriUser.length < numeriTotali) {
         // Creo la variabile per il numero inserito dall'utente
         var thisUserNumeri = parseInt( prompt('Inserisci i numeri visualizzati in precedenza') );
-        if (userNumeri.includes(thisUserNumeri) == false) {
-            userNumeri.push(thisUserNumeri);
+        if (numeriUser.includes(thisUserNumeri) == false) {
+            numeriUser.push(thisUserNumeri);
         } else {
             alert('Numero già inserito');
         }
     }
-},30000);
+    console.log(numeriUser);
+},3000);
 
+
+//3. numeri indovinati 
+var numeriIndovinati = [];
+
+for ( i = 0; i < numeriUser.length; i++ ) {
+    var thisnumeriIndovinati = numeriUser[i];
+
+    if (numeri.includes(thisnumeriIndovinati) == true ) {
+        numeriIndovinati.push(thisnumeriIndovinati);
+    }
+}
+console.log(numeriIndovinati);
+
+
+
+//4. stampa del risultato
