@@ -25,3 +25,6 @@ function numeroCasuale(max) {
 
 //i numeri generati
 console.log(numeri);
+
+//stampare i numeri nell' allert
+alert('Hai 30 secondi per memorizzare questi 5 numeri: ' + numeri);
